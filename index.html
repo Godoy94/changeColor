@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trocador de cor</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        
+        button {
+            width: 130px;
+            height: 40px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="changeColor()">Change Color</button>
+    </div>
+
+    <script>
+        function changeColor() {
+            const colors = ["yellow", "red", "orange", "green", "pink", "blue", "white", "purple"];
+            const ramdom = Math.floor(Math.random(colors.length) * colors.length);
+
+            document.body.style.backgroundColor = colors[ramdom];
+        }
+    </script>
+</body>
+</html>
